@@ -1,0 +1,12 @@
+/* BlurDistort.css */
+.blur-distort-container {
+    filter: blur(0);
+    transform: scale(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+  }
+
+  .blur-distort-effect {
+    filter: blur(var(--blur-amount, 0px)) !important;
+    transform: scale(1) translateY(var(--distort-amount, 0px)) !important;
+  }
+  

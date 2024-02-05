@@ -1,25 +1,36 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import logo from './Assetes/logo.png';
+import Main from './Component/Main';
+import SideBtn from './Component/SideBtn';
+import CustomCursor from './Component/CustomCursor';
+// import Cursor from './Component/Cursor';
+// import BlurDistort from './Component/BlurDistort';
 
-function App() {
+const App = () => {
+  const [isSidebtnClicked, setSidebtnClicked] = useState(false);
+
+  const handleSidebtnClick = (event) => {
+    event.preventDefault(); 
+    setSidebtnClicked(!isSidebtnClicked);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <CustomCursor/>
+    {/* <Cursor/> */}
+    {/* <BlurDistort/> */}
+      <div className="logo">
+        <img src={logo} alt="logo" />
+      </div>
+      <div className="menu-bar" onClick={handleSidebtnClick}>
+        <i className={`fa-solid ${isSidebtnClicked ? 'fa-x' : 'fa-bars'}`}></i>
+      </div>
+
+      {isSidebtnClicked && <SideBtn />}
+
+      <Main />
+    </>
   );
-}
+};
 
 export default App;

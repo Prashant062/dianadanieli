@@ -1,0 +1,86 @@
+.menubar-container{
+    display: flex;
+    width: 80vw;
+    height: 100vh;
+    position: absolute;
+    left:10%;
+    background-color: black;
+    z-index: 200;
+}
+.text-logo{
+    color: aliceblue;
+    position: relative;
+    top: 4rem;
+}
+.about-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    position: absolute;
+    top: 20rem;
+}
+.about-section a{
+    font-size: small;
+    color: aliceblue;
+    text-decoration: none;
+}
+.dfc-container{
+    display: flex;
+    flex-direction: column;
+   width: 8rem;
+    height: 4rem;
+    position: absolute;
+    top: 18.5rem; 
+    left:15rem;
+}
+.dfc-container a{
+    font-size: small;
+    color: aliceblue;
+    text-decoration: none;
+}
+.pro-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    width: 5rem;
+    color: aliceblue;
+    position: relative;
+    top: 20rem;
+    left:14rem;
+    font-size: small;
+}
+.contact-cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    width: 5rem;
+    color: aliceblue;
+    font-size: small;
+    position: absolute;
+    top: 20rem;
+    left:40rem;
+}
+.contact-info{
+    font-size: small;
+    position: absolute;
+    color: aliceblue;
+    top: 19rem;
+    left:59rem;
+}
+.copyRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    border: 1px solid rgb(145, 95, 95);
+    position: absolute;
+    top: 35rem;
+}
+.copyRight a{
+    font-size: small;
+    color: aliceblue;
+    text-decoration: none;
+}

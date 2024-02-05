@@ -1,0 +1,25 @@
+.look-btn {
+    position: relative;
+  }
+  
+  .button {
+    position: absolute;
+    transition: left 0.5s ease; /* Add transition for left property */
+  }.look-btn {
+    position: relative;
+  }
+  
+  .button {
+    position: absolute;
+    transition: left 0.5s ease; /* Add transition for left property */
+  }
+  
+  .active {
+    /* Add styles for active button if needed */
+  }
+  
+  
+  .active {
+    /* Add styles for active button if needed */
+  }
+  

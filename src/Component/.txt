@@ -1,0 +1,218 @@
+import React, { useState } from 'react';
+import './Main.css';
+
+function Main() {
+    const [activeSection, setActiveSection] = useState('design');
+
+    const handleButtonClick = (section) => {
+        setActiveSection(section);
+    };
+
+    return (
+        <div className="main-container">
+            <div
+                className={`image-container ${activeSection === 'design' ? 'active' : ''}`}
+            >
+                <div className="image-text">
+                    <h1>DAndhAthn</h1>
+                    <h1>AndnTeRbeRov</h1>
+                </div>
+            </div>
+            <div
+                className={`image-furniture ${activeSection === 'furniture' ? 'active' : ''}`}
+            >
+                <div className="image-text">
+                    <h1>PROAndhVOdWithTVO</h1>
+                    <h1>mebelAnd</h1>
+                </div>
+            </div>
+            <div
+                className={`image-construction ${activeSection === 'construction' ? 'active' : ''
+                    }`}
+            >
+                <div className="image-text">
+                    <h1>TOOmPleToWithnOe</h1>
+                    <h1>WithTROAndTelbWithTVO</h1>
+                </div>
+            </div>
+            <div className="buttons-container">
+                <button onClick={() => handleButtonClick('design')}>Design</button>
+                <button onClick={() => handleButtonClick('furniture')}>Furniture</button>
+                <button onClick={() => handleButtonClick('construction')}>Construction</button>
+            </div>
+        </div>
+    );
+}
+
+export default Main;
+
+
+.main-container{
+    position: relative;
+    background-color: black;
+    border: 2px solid rgb(116, 106, 106);
+    height: 100vh;
+    overflow: hidden;
+}  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10rem;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+  }
+  .image {
+    flex: 1;
+    height: 70vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .button-container {
+    text-align: center;
+  }
+  .active {
+    border: 2px solid #ff5733; /* Highlight the active image */
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* src/Main.css */
+.main-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 10rem;
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image {
+  flex: 0 0 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background: #555;
+}
+
+
+
+
+
+
+/* src/Main.css */
+.main-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 10rem;
+}
+
+.heading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1; /* Ensure the heading is above the images */
+}
+
+.heading-container h1 {
+  margin: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7); /* Add a semi-transparent background for better visibility */
+}
+
+.image-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image {
+  flex: 0 0 100%;
+  height: 70vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background: #555;
+}
+const images = [
+    { src: Design, heading1: 'DAndhAthn', heading2: 'AndnTeRbeRov' },
+
+    { src: Furniture, heading1: 'AndnTeRbeRov', heading2: 'mebelAnd' },
+    { src: Design, heading1: 'AndnTeRbeRov', heading2: 'Subheading2' },
+    
+  ];
+
+  
+        <h1>{images[currentIndex].heading1}</h1>
+          <h1>{images[currentIndex].heading2}</h1>
